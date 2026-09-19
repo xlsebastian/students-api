@@ -6,3 +6,8 @@ app = FastAPI(tittle="students-api", version=APP_VERSION)
 @app.get("/healt")
 def healt():
     return {"status":"ok"}
+
+@app.get("/students")
+def list_students():
+    return [{"id":1,"name":"John Doe","phone":"123-456-7890"},
+            {"id":2,"name":"Jane Smith","phone":"098-765-4321"}]
