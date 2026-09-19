@@ -3,9 +3,9 @@ from config import APP_VERSION
 
 app = FastAPI(tittle="students-api", version=APP_VERSION)
 
-@app.get("/healt")
-def healt():
-    return {"status":"ok"}
+@app.get("/health")
+def health():
+    return {"status":"healthy"}
 
 @app.get("/students")
 def list_students():
